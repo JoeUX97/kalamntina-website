@@ -47,3 +47,9 @@ official files for ICCI, Arabtech Jardaneh and an English Bank al Etihad lockup.
 - Replace stock photography (currently loaded from a public CDN) with licensed or commissioned images.
 - Connect the diagnostic form to a real endpoint.
 - Remove the "Design preview" tag and `noindex` headers.
+
+## Vercel project
+
+- Project: `kalamntina-preview` (connected to this repo)
+- Production branch: `main` · Framework preset: Other · No build command · Output: repo root
+- Preview URL: https://kalamntina-preview.vercel.app
