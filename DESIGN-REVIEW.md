@@ -79,21 +79,23 @@ Existing decision honoured, not reopened: Client voices stays on hold until appr
 
 ## Implementation Tasks
 
-- [ ] **T1 (P1, human: ~4h / CC: ~30min)** Mobile nav: build the full-screen overlay menu (15A).
+Status 2026-10-18: T1–T11 built on `dev`; T12 brief written (`PHOTO-BRIEF.md`), photo swap pending client delivery.
+
+- [x] **T1 (P1, human: ~4h / CC: ~30min)** Mobile nav: build the full-screen overlay menu (15A).
   - Files: `index.html`. Verify: 390px, open/close via button and Esc, focus trapped, all links reachable.
-- [ ] **T2 (P1, human: ~1h / CC: ~10min)** Contrast tokens: add `--orange-text`, `--muted`; replace failing pairs (12A, 13A).
+- [x] **T2 (P1, human: ~1h / CC: ~10min)** Contrast tokens: add `--orange-text`, `--muted`; replace failing pairs (12A, 13A).
   - Verify: re-run contrast check, all text ≥4.5:1 (large ≥3:1).
-- [ ] **T3 (P1, human: ~3h / CC: ~25min)** Form: states, challenge textarea, any-email rule (4A, 5A, 25A).
+- [x] **T3 (P1, human: ~3h / CC: ~25min)** Form: states, challenge textarea, any-email rule (4A, 5A, 25A).
   - Verify: submit empty, bad email, simulated network failure, success focus.
-- [ ] **T4 (P1, human: ~1h / CC: ~10min)** Accessibility structure: `<main>`, skip link, 44px targets (16A, 17A).
-- [ ] **T5 (P1, human: ~2h / CC: ~15min)** Hero: logo proof strip, one-sentence promise, single CTA, verb plays once + pause, server-rendered verb (1A, 2A, 3A, 6A, 9A).
-- [ ] **T6 (P2, human: ~2h / CC: ~15min)** Content: trim Who we are and Solutions intro, qualify stats with client placeholders, remove kickers, unify CTA labels in nav and CTA section (2A, 3A, 7A, 10A).
-- [ ] **T7 (P2, human: ~3h / CC: ~30min)** Logo wall: monochrome assets, mobile 3-col + "Show all 20" (11A, 18A).
-- [ ] **T8 (P2, human: ~1h / CC: ~10min)** Solutions cards: services always visible; mobile stacked (19A, 20A).
-- [ ] **T9 (P2, human: ~1h / CC: ~10min)** Links: anchors + "Soon" tags, Arabic "Soon" state (21A, 22A).
-- [ ] **T10 (P2, human: ~30min / CC: ~5min)** Layout cleanup: sticky impact column, delete unused method CSS (23A, 24A).
-- [ ] **T11 (P2, human: ~3h / CC: ~30min)** DESIGN.md + token consolidation incl. RTL rules (14A, 22A).
-- [ ] **T12 (P3, human: ~1h / CC: ~10min)** Photo brief for Kalamntina (8A); swap photos when delivered.
+- [x] **T4 (P1, human: ~1h / CC: ~10min)** Accessibility structure: `<main>`, skip link, 44px targets (16A, 17A).
+- [x] **T5 (P1, human: ~2h / CC: ~15min)** Hero: logo proof strip, one-sentence promise, single CTA, verb plays once + pause, server-rendered verb (1A, 2A, 3A, 6A, 9A).
+- [x] **T6 (P2, human: ~2h / CC: ~15min)** Content: trim Who we are and Solutions intro, qualify stats with client placeholders, remove kickers, unify CTA labels in nav and CTA section (2A, 3A, 7A, 10A).
+- [x] **T7 (P2, human: ~3h / CC: ~30min)** Logo wall: monochrome assets, mobile 3-col + "Show all 20" (11A, 18A).
+- [x] **T8 (P2, human: ~1h / CC: ~10min)** Solutions cards: services always visible; mobile stacked (19A, 20A).
+- [x] **T9 (P2, human: ~1h / CC: ~10min)** Links: anchors + "Soon" tags, Arabic "Soon" state (21A, 22A).
+- [x] **T10 (P2, human: ~30min / CC: ~5min)** Layout cleanup: sticky impact column, delete unused method CSS (23A, 24A).
+- [x] **T11 (P2, human: ~3h / CC: ~30min)** DESIGN.md + token consolidation incl. RTL rules (14A, 22A).
+- [x] **T12 (P3, human: ~1h / CC: ~10min)** Photo brief for Kalamntina (8A); swap photos when delivered.
 
 ## Design Review Completion Summary
 

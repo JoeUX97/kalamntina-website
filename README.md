@@ -11,6 +11,11 @@ favicon.svg
 assets/brand/              Kalamntina logo
 assets/clients/            Client logos for the "Client impact" wall
 vercel.json                Hosting config (headers, deploy rules)
+DESIGN.md                  Design system: tokens, components, motion, a11y, RTL rules
+DESIGN-REVIEW.md           Home page design review (2026-10-18) and task status
+PHOTO-BRIEF.md             Brief for regional photography
+TODOS.md                   Deferred work (Arabic page, client voices)
+assets/clients/mono/       Monochrome client logos (default state of the wall)
 ```
 
 ## Branches and publishing
