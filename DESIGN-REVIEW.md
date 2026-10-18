@@ -22,7 +22,7 @@ independent second reviewer (Claude subagent, cold read). Mode: marketing page (
 | 6 | Initial render | 6A: "hire." and final stat values in server HTML; JS only animates; reduced-motion shows final values |
 | 7 | Stats trust | 7A: "100% 12-month retention" (client confirms window); replace MENA with a real figure (e.g. countries served / years); placeholders flagged for client |
 | 8 | Photography | 8A: write a regional photo brief (GCC/Jordan boardrooms, Arab professionals, natural light, desaturated to navy palette); Creative Tim template photos are placeholders until delivered |
-| 9 | Hero motion | **Amended 2026-10-18:** continuous loop (~4.2s per verb) with pause/play; no hover pause. Original 9A: play the 4 verbs once, then rest on "hire." (or the visitor's pick); pause/play toggle; pause on hover/focus; reduced motion = static |
+| 9 | Hero motion | **Amended 2026-10-18:** continuous loop (~4.2s per verb); pause button removed at client request, arrows stop autoplay; no hover pause. Original 9A: play the 4 verbs once, then rest on "hire." (or the visitor's pick); pause/play toggle; pause on hover/focus; reduced motion = static |
 | 10 | Section kickers | 10A: remove the orange eyebrow labels; headings carry sections; keep #anchors |
 | 11 | Logo tone | 11A: monochrome Ink Navy SVG/raster versions at 55% opacity, full colour on hover; Orange uses its knocked-out wordmark |
 | 12 | Orange text | 12A: new token `--orange-text: #C2520B` for orange text on light surfaces (4.4:1, large text); `#FF7722` stays for buttons, dark surfaces, logo |

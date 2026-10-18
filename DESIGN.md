@@ -38,7 +38,7 @@ Rules
 
 | Role | Font | Size | Weight | Tracking |
 |---|---|---|---|---|
-| Hero verb | Bricolage Grotesque | `clamp(84px,15vw,232px)` | 700 | -0.06em |
+| Hero verb | Bricolage Grotesque | `clamp(84px,15vw,232px)` | 700 | -0.06em (keep `padding-inline-end:.12em` so the final glyph isn't clipped) |
 | Hero lead | Bricolage Grotesque | `clamp(28px,3.4vw,52px)` | 500 | -0.03em |
 | Section title (`h2.title`) | Bricolage Grotesque | `clamp(34px,4.4vw,64px)` | 600 | -0.04em |
 | Sub-heading (`h3`) | Bricolage Grotesque | `clamp(22px,2vw,28px)` | 600 | -0.02em |
@@ -80,7 +80,7 @@ No section eyebrows/kickers above headings (review decision 10A). Headings carry
 
 ## Motion
 
-- One signature moment: the hero verb, revealed letter by letter, rotates **continuously** (hire → build → advise → operate, ~4.2s each; client choice 2026-10-18). Pause/play control; keyboard focus inside the hero pauses it; there is no hover pause because the hero fills the viewport.
+- One signature moment: the hero verb, revealed letter by letter, rotates **continuously** (hire → build → advise → operate, ~4.2s each; client choice 2026-10-18). No pause button (client choice): using the prev/next arrows stops autoplay; keyboard focus inside the hero pauses it; there is no hover pause because the hero fills the viewport.
 - Entrance: `rise` (16px, 1s, ease-out) on hero elements only.
 - Count-up on numbers is enhancement only: final values are in the HTML; only numbers below the fold animate.
 - `prefers-reduced-motion`: all animation and smooth scroll off; the verb is static.
