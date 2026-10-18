@@ -60,7 +60,7 @@ No section eyebrows/kickers above headings (review decision 10A). Headings carry
 
 ## Components
 
-**Primary button** `.btn` / `.sub-btn`: orange, `--orange-ink` text, 56px tall, 6px radius, trailing arrow that nudges 3px on hover. One label for the conversion everywhere: **"Request a diagnostic"** (nav may read "Get a diagnostic").
+**Primary button** `.btn` / `.sub-btn`: orange, `--orange-ink` text, 56px tall, 6px radius, trailing arrow that nudges 3px on hover. One label for the conversion everywhere: **"Request a diagnostic"** (nav may read "Get a diagnostic"). Hero pairs it with a secondary text link "Browse jobs" (`.link`).
 
 **Text link** `.more`: 16px/600, orange 2px underline on the label, arrow, 44px hit area.
 
@@ -80,7 +80,7 @@ No section eyebrows/kickers above headings (review decision 10A). Headings carry
 
 ## Motion
 
-- One signature moment: the hero verb, revealed letter by letter, plays **one cycle** (hire → build → advise → operate → hire) then rests. Pause/play control; keyboard focus inside the hero pauses it; there is no hover pause because the hero fills the viewport.
+- One signature moment: the hero verb, revealed letter by letter, rotates **continuously** (hire → build → advise → operate, ~4.2s each; client choice 2026-10-18). Pause/play control; keyboard focus inside the hero pauses it; there is no hover pause because the hero fills the viewport.
 - Entrance: `rise` (16px, 1s, ease-out) on hero elements only.
 - Count-up on numbers is enhancement only: final values are in the HTML; only numbers below the fold animate.
 - `prefers-reduced-motion`: all animation and smooth scroll off; the verb is static.

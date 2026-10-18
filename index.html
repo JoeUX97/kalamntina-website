@@ -116,6 +116,12 @@ h2.title{font-family:var(--f-display);font-weight:600;font-size:clamp(34px,4.4vw
 .btn:hover{background:var(--orange-hover)}
 .btn svg{width:16px;height:16px;transition:transform .25s}
 .btn:hover svg{transform:translateX(3px)}
+.actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px 28px}
+.link{display:inline-flex;align-items:center;gap:8px;min-height:44px;font-weight:500;font-size:16px;color:var(--white);transition:color .2s}
+.link svg{width:16px;height:16px}
+a.link:hover{color:var(--orange)}
+.link.is-soon{color:var(--soft)}
+.link .soon{margin-left:4px}
 
 /* proof strip (1A) */
 .proof{display:flex;align-items:center;gap:clamp(20px,3vw,48px);padding:22px var(--gutter) clamp(24px,4vh,36px);border-top:1px solid var(--hair);margin:0 var(--gutter);padding-left:0;padding-right:0}
@@ -145,6 +151,7 @@ h2.title{font-family:var(--f-display);font-weight:600;font-size:clamp(34px,4.4vw
   .hero{min-height:max(680px,100svh);padding-top:80px}
   .hero::before{background:rgba(10,18,32,.68)}
   .stage{justify-content:flex-end;padding-top:32px;padding-bottom:28px}
+  .actions{width:100%}
   .btn{width:100%;justify-content:center}
   .proof{flex-direction:column;align-items:flex-start;gap:14px}
   .proof ul{width:100%;justify-content:space-between}
@@ -419,7 +426,10 @@ a.more:hover{gap:14px}
     </div>
     <div class="row">
       <p class="sub rise d1">We work with leadership teams across the GCC and MENA on the people side of strategy.</p>
-      <a class="btn rise d2" href="#start">Request a diagnostic <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M2.5 8h11M9.5 4l4 4-4 4"/></svg></a>
+      <div class="actions rise d2">
+        <a class="btn" href="#start">Request a diagnostic <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M2.5 8h11M9.5 4l4 4-4 4"/></svg></a>
+        <span class="link is-soon" aria-disabled="true">Browse jobs <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 10l6-6M5 4h5v5"/></svg><span class="soon">Soon</span></span>
+      </div>
     </div>
   </div>
   <div class="proof rise d3">
@@ -584,27 +594,27 @@ a.more:hover{gap:14px}
 </footer>
 
 <script>
-/* Hero: one full cycle hire → build → advise → operate → hire, then rest (9A). */
+/* Hero: verb + photo rotate continuously (client choice, 2026-10-18). Pause/play button stops it (WCAG 2.2.2). */
 (function(){
   const D=['hire.','build.','advise.','operate.'];
   const CYCLE=4200,$=id=>document.getElementById(id);
   const verb=$('verb'),imgs=[...document.querySelectorAll('.bg img')],ctl=$('vctl'),tog=$('toggle'),hero=document.querySelector('.hero');
   const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
-  let i=0,steps=0,t=null,playing=!reduce,hold=false;
+  let i=0,t=null,playing=!reduce,hold=false;
   const letters=w=>{verb.innerHTML=[...w].map((c,k)=>`<span class="ch" style="transition-delay:${k*40}ms">${c}</span>`).join('')};
   const count=n=>{$('count').innerHTML=`<b>0${n+1}</b> / 0${D.length}`};
-  function setPlaying(p){playing=p;ctl.classList.toggle('paused',!p);tog.setAttribute('aria-label',p?'Pause animation':(steps>=D.length?'Replay animation':'Play animation'));if(!p)clearTimeout(t)}
+  function setPlaying(p){playing=p;ctl.classList.toggle('paused',!p);tog.setAttribute('aria-label',p?'Pause animation':'Play animation');if(!p)clearTimeout(t)}
   function show(n){
     i=n;imgs.forEach((im,k)=>im.classList.toggle('on',k===n));count(n);
     if(reduce){verb.textContent=D[n];return}
     verb.classList.remove('in');verb.classList.add('out');
     setTimeout(()=>{verb.classList.remove('out');letters(D[n]);void verb.offsetWidth;verb.classList.add('in')},480);
   }
-  function tick(){clearTimeout(t);if(!playing||hold)return;t=setTimeout(()=>{steps++;show(steps%D.length);if(steps>=D.length){setPlaying(false)}else tick()},CYCLE)}
+  function tick(){clearTimeout(t);if(!playing||hold)return;t=setTimeout(()=>{show((i+1)%D.length);tick()},CYCLE)}
   function manual(n){setPlaying(false);show(n)}
   $('next').addEventListener('click',()=>manual((i+1)%D.length));
   $('prev').addEventListener('click',()=>manual((i+D.length-1)%D.length));
-  tog.addEventListener('click',()=>{if(playing){setPlaying(false)}else{if(steps>=D.length){steps=0;show(0)}setPlaying(true);tick()}});
+  tog.addEventListener('click',()=>{if(playing){setPlaying(false)}else{setPlaying(true);show((i+1)%D.length);tick()}});
   /* Pause only while keyboard focus is on hero content (the controls never pause it).
      No hover pause: the hero fills the viewport, so hover-pause would stop the cycle on the first mouse move.
      The pause/play button satisfies WCAG 2.2.2. */
