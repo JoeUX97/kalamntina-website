@@ -80,7 +80,7 @@ No section eyebrows/kickers above headings (review decision 10A). Headings carry
 
 ## Motion
 
-- One signature moment: the hero verb, revealed letter by letter, plays **one cycle** (hire → build → advise → operate → hire) then rests. Pause/play control; hovering or focusing hero content pauses it; the controls themselves don't.
+- One signature moment: the hero verb, revealed letter by letter, plays **one cycle** (hire → build → advise → operate → hire) then rests. Pause/play control; keyboard focus inside the hero pauses it; there is no hover pause because the hero fills the viewport.
 - Entrance: `rise` (16px, 1s, ease-out) on hero elements only.
 - Count-up on numbers is enhancement only: final values are in the HTML; only numbers below the fold animate.
 - `prefers-reduced-motion`: all animation and smooth scroll off; the verb is static.

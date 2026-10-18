@@ -605,11 +605,11 @@ a.more:hover{gap:14px}
   $('next').addEventListener('click',()=>manual((i+1)%D.length));
   $('prev').addEventListener('click',()=>manual((i+D.length-1)%D.length));
   tog.addEventListener('click',()=>{if(playing){setPlaying(false)}else{if(steps>=D.length){steps=0;show(0)}setPlaying(true);tick()}});
-  /* Pause while the visitor hovers or focuses hero content; the controls themselves never pause it. */
+  /* Pause only while keyboard focus is on hero content (the controls never pause it).
+     No hover pause: the hero fills the viewport, so hover-pause would stop the cycle on the first mouse move.
+     The pause/play button satisfies WCAG 2.2.2. */
   const setHold=h=>{if(h===hold)return;hold=h;if(h)clearTimeout(t);else tick()};
   const onControls=el=>!!(el&&el.closest&&el.closest('#vctl'));
-  hero.addEventListener('pointerover',e=>setHold(!onControls(e.target)));
-  hero.addEventListener('pointerleave',()=>setHold(false));
   hero.addEventListener('focusin',e=>setHold(!onControls(e.target)));
   hero.addEventListener('focusout',e=>{if(!hero.contains(e.relatedTarget))setHold(false)});
   if(reduce){setPlaying(false);tog.setAttribute('aria-label','Play animation');return}
