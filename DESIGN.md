@@ -82,6 +82,8 @@ No section eyebrows/kickers above headings (review decision 10A). Headings carry
 
 - One signature moment: the hero verb, revealed letter by letter, rotates **continuously** (hire → build → advise → operate, ~4.2s each; client choice 2026-10-18). No pause button (client choice): using the prev/next arrows stops autoplay; keyboard focus inside the hero pauses it; there is no hover pause because the hero fills the viewport.
 - Entrance: `rise` (16px, 1s, ease-out) on hero elements only.
+- Hero photo: cross-fade 1.3s with a slow zoom from 1.06 to 1.0 over 8s, so the resting frame is never upscaled.
+- CTA supergraphic: the brand mark rotates around its own centre, one turn per 90s, linear (`.orbit`). The orange accent petal makes the motion readable; it is decorative only.
 - Count-up on numbers is enhancement only: final values are in the HTML; only numbers below the fold animate.
 - `prefers-reduced-motion`: all animation and smooth scroll off; the verb is static.
 
@@ -104,4 +106,5 @@ No section eyebrows/kickers above headings (review decision 10A). Headings carry
 
 - Brand: `/assets/brand/kalamntina-logo.svg`, `/favicon.svg`.
 - Clients: colour in `/assets/clients/`, monochrome in `/assets/clients/mono/`. Sources in README.
-- Photography: placeholders until the regional shoot (see `PHOTO-BRIEF.md`).
+- Photography: placeholders until the regional shoot (see `PHOTO-BRIEF.md`). Served at full resolution from the Unsplash CDN (originals 2558–7952px) with `srcset` + `auto=format` (AVIF/WebP). Hero: 1280–3840w, q82, `sizes` caps phones at ~2x density. Cards: 640–1920w, q80.
+  - Hire / meeting: `photo-1556761175-b413da4baf72` · Build: `photo-1522071820081-009f0129c71c` (Annie Spratt) · Advise: `photo-1524758870432-af57e54afa26` (Toa Heftiba, portrait) · Operate: `photo-1541746972996-4e0b0f43e02a`.

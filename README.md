@@ -49,7 +49,7 @@ official files for ICCI, Arabtech Jardaneh and an English Bank al Etihad lockup.
 
 ## Pending before launch
 
-- Replace stock photography (currently loaded from a public CDN) with licensed or commissioned images.
+- Replace stock photography (currently Unsplash originals via images.unsplash.com, IDs in DESIGN.md) with licensed or commissioned images.
 - Connect the diagnostic form to a real endpoint.
 - Remove the "Design preview" tag and `noindex` headers.
 
